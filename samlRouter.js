@@ -40,9 +40,9 @@ passport.deserializeUser(function(id, done) {
 // saml strategy for passport
 passport.use(new SamlStrategy(
 	{
-		entryPoint: 'https://logintest.ford.com.tr/SAML/SSOService.aspx',
-		issuer: 'BlockchainTest',
-    cert: process.env.FORD_CERT,
+		entryPoint: 'https://logintest.com.tr/SAML',
+		issuer: 'BTest',
+    cert: process.env.CERT,
 		path: '/login/callback',
 	},
 	function(profile, cb){
